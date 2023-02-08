@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/videocall.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <p>Room name:</p>
+    </header>
+    <main>
+        <div class="all">
+            <div class="users">
+                <div class="user"><span></span></div>
+            </div>
+            <div class="video">
+                <div id="videoscontainer"></div>
+            </div>
+
+            <section class="controls-wrapper">
+
+                <div class="icon-wrapper">
+                    <img class="control-icon" id="mic-btn" src="{% static 'images/microphone.svg' %}"/>
+                    <img class="control-icon" id="camera-btn" src="{% static 'images/video.svg' %}"/>
+                    <img class="control-icon" id="leave-btn" src="{% static 'images/leave.svg' %}"/>
+                </div>
+
+            </section>
+
+            <div class="chatcontainer"></div>
+
+        </div>  
+    </main>
+    <script type="text/javascript" src="{% static 'assets/AgoraRTC_N-4.16.0.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/videocall.js' %}"></script>
+</body>
+</html>
